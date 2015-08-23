@@ -1,4 +1,4 @@
-package com.sky.leetcode;
+package com.sky.leetcode.easy;
 /*
  *  @author: DuanSky
  *    @time: 2015年8月19日 下午10:26:26
