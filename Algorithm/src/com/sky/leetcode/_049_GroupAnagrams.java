@@ -1,4 +1,4 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +13,7 @@ import java.util.Map.Entry;
  * ÈçÏÂ£º[""],["",""],["a"]
  * Ñ§Ï°Arrays.asList();
  */
-public class _004_GroupAnagrams {
+public class _049_GroupAnagrams {
 	
 	public static void main(String args[]){
 		String[] strs={"and","dna"};

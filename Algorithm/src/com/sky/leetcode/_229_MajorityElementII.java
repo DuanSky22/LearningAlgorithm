@@ -1,11 +1,11 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class _002_MajorityElementII {
+public class _229_MajorityElementII {
 
 	public static List<Integer> majorityElement(int[] nums) {
         int n=nums.length;

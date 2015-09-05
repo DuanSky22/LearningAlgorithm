@@ -1,9 +1,9 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class _001_MajorityElement {
+public class _169_MajorityElement {
 	
 	public static void main(String args[]){
 		int[] nums={1,1,2,2,2,3,3,3,3,1,1,1};

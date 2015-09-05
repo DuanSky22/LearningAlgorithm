@@ -4,9 +4,9 @@
  * 我理解的是，考虑两个字符串中，看他们的子串是否都构成回文。
  * 对于原文题目，只需要统计每个字符出现的次数即可。时间和空间消耗都是o(n)
  */
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 
-public class _003_ValidAnagram {
+public class _242_ValidAnagram {
 	
 	public static void main(String args[]){
 		String s="anagram";

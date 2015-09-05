@@ -1,4 +1,4 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 /*
  *  @author: DuanSky
  *    @time: 2015年8月23日 下午12:34:47
@@ -19,7 +19,7 @@ class ListNode{
 	ListNode next;
 	ListNode(int x){this.val=x;}
 }
-public class _007_PalindromeLinkedList {
+public class _234_PalindromeLinkedList {
 	public boolean isPalindrome(ListNode head) {
         if(head==null)
         	return true;

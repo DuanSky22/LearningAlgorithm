@@ -1,11 +1,11 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 /*
  *  @author: DuanSky
  *    @time: 2015年8月22日 下午10:06:09
  * @content:
 	这一题主要考察Java中char字符的过滤。
  */
-public class _006_ValidPalindrome {
+public class _125_ValidPalindrome {
 	public static void main(String args[]){
 		for(int i=0;i<0xffff;i++){
 			System.out.println((char)i);

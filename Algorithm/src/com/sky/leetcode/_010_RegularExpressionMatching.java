@@ -1,11 +1,11 @@
-package com.sky.leetcode.easy;
+package com.sky.leetcode;
 /*
  *  @author: DuanSky
  *    @time: 2015年8月19日 下午10:26:26
  * @content:
 
  */
-public class _005_RegularExpressionMatching {
+public class _010_RegularExpressionMatching {
 	public static void main(String args[]){
 		System.out.println(isMatch("ab", ".*"));
 	}
