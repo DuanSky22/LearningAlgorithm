@@ -71,8 +71,6 @@ public class _002_AddTwoNumbers {
         else if(carry!=0){
         	temp.next=new ListNode(carry);
         }
-        
         return result;
-        
     }
 }
