@@ -5,10 +5,10 @@
 */
 package com.sky.leetcode.util;
 
-public class ListNode {
+public class _ListNode {
      public int val;
-     public ListNode next;
-     public ListNode(int x){ 
+     public _ListNode next;
+     public _ListNode(int x){ 
     	 val = x; 
      }
 }
