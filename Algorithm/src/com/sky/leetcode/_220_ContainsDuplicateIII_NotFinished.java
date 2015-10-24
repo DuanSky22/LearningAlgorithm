@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContainsDuplicateIII {
+public class _220_ContainsDuplicateIII_NotFinished {
 	
 	public static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
 		

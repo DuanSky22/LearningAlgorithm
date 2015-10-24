@@ -5,7 +5,7 @@
 */
 package com.sky.leetcode;
 
-public class SingleNumberII {
+public class _137_SingleNumberII {
 	public static void main(String args[]){
 		int[] nums={1,1,1,2};
 		System.out.println(singleNumber(nums));

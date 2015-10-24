@@ -5,7 +5,7 @@
 */
 package com.sky.leetcode;
 
-public class FirstBadVersion {
+public class _278_FirstBadVersion {
 	
 	public static int T=1702766719;
 	

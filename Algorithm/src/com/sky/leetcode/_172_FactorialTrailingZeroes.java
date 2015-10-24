@@ -1,6 +1,6 @@
 package com.sky.leetcode;
 
-public class FactorialTrailingZeroes {
+public class _172_FactorialTrailingZeroes {
 	
 	public static void main(String args[]){
 		System.out.println(trailingZeroes(30));

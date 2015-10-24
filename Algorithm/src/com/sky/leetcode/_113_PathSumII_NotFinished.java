@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PathSumII_NotFinished {
+public class _113_PathSumII_NotFinished {
 	
 	public static void main(String args[]){
 		

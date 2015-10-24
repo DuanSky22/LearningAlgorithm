@@ -5,7 +5,7 @@
 */
 package com.sky.leetcode;
 
-public class RomantoInteger {
+public class _013_RomantoInteger_NotFinished {
 	public int romanToInt(String s) {
 		int result=0;
 		int[] aArray = {1000,900,500,400,100,90,50,40,10,9,5,4,1};

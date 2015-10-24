@@ -1,6 +1,6 @@
 package com.sky.leetcode;
 
-public class PalindromeNumber {
+public class _009_PalindromeNumber_NotFinished {
 	
 	public static void main(String args[]){
 		System.out.println(isPalindrome(147483647));

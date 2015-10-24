@@ -5,7 +5,7 @@
 */
 package com.sky.leetcode;
 
-public class ClimbingStairs {
+public class _070_ClimbingStairs {
 	
 	public static void main(String args[]){
 		int n=50;

@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContainsDuplicateII {
+public class _219_ContainsDuplicateII {
 	
 	public static void main(String args[]){
 		System.out.println(containsNearbyDuplicate(new int[]{-1,-1},1));

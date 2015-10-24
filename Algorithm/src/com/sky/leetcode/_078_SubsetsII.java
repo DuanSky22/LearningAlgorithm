@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubsetsII {
+public class _078_SubsetsII {
 	
 	
 	public static List<List<Integer>> subsetsWithDup(int[] nums) {

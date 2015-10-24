@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StringtoInteger_1 {
+public class _008_StringtoInteger_1 {
 	public static void main(String args[]){
 		String str="      -11919730356x";
 		System.out.println(myAtoi(str));

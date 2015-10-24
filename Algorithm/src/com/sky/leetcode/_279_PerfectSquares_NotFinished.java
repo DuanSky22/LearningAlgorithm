@@ -5,7 +5,7 @@
 */
 package com.sky.leetcode;
 
-public class PerfectSquares_NotFinished {
+public class _279_PerfectSquares_NotFinished {
 	
 	public static void main(String args[]){
 		int n=12;

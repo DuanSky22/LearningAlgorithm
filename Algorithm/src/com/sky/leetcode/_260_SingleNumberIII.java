@@ -8,7 +8,7 @@ package com.sky.leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SingleNumberIII {
+public class _260_SingleNumberIII {
 	
 	public static void main(String args[]){
 		int[] nums={1,1,2,2,3,3,4,5};
