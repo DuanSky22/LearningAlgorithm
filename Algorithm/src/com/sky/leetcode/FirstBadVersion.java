@@ -47,6 +47,23 @@ public class FirstBadVersion {
         return left;
     }
 	
+	public int binarySearch(int[] nums,int target){
+		int low=0;
+		int high=nums.length-1;
+		while(low<high){
+			int mid=(low+high)/2;
+			if(nums[mid]<target)
+				high=mid;
+			else
+				low=mid+1;
+		}
+		if(nums[low]==target)
+			return low;
+		if(low==0)
+			return 0;
+		return nums[low]-target>target-nums[low-1] ? low-1 : low;
+	}
+	
 	public static boolean isBadVersion(int k){
 		if(k<T)
 			return false;
