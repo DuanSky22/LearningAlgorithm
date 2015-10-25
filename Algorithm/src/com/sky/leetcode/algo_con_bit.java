@@ -8,15 +8,16 @@ package com.sky.leetcode;
 public class algo_con_bit {
 
 	public static void main(String args[]){
-		int a=575899;
+		int a=Integer.MAX_VALUE-133;
 		int b=13;
 		int k=16;
-		System.out.println("a:"+Integer.toBinaryString(a));
-		System.out.println("clear last K:"+Integer.toBinaryString(clearLastK(a,k)));
-		System.out.println("get high k:"+Integer.toBinaryString(getHighKbit(a,k)));
-		System.out.println("get low k:"+Integer.toBinaryString(getLowKbit(a,k)));
-		switchAB(a,b);
-		System.out.println("count one bit "+Integer.bitCount(a)+":"+count1bitCount(a));
+		int max=Integer.MAX_VALUE;
+		System.out.println("        a:"+Integer.toBinaryString(a));
+//		System.out.println("clear last K:"+Integer.toBinaryString(clearLastK(a,k)));
+//		System.out.println("get high k:"+Integer.toBinaryString(getHighKbit(a,k)));
+//		System.out.println("get low k:"+Integer.toBinaryString(getLowKbit(a,k)));
+//		switchAB(a,b);
+//		System.out.println("count one bit "+Integer.bitCount(a)+":"+count1bitCount(a));
 		System.out.println("reverse a:"+Integer.toBinaryString(reverseInt(a)));
 	}
 	
@@ -54,10 +55,11 @@ public class algo_con_bit {
 	}
 	
 	public static int reverseInt(int a){
-		int n=32;int result=0;int i=0;
-		while(a!=0){
-			if((a&1)==1)
-				result+=(int)Math.pow(2, 32-i++);
+		int bit=0;int result=0;
+		for(int i=0;i<32;i++){
+			bit=a&1;
+			result<<=1;
+			result+=bit;
 			a>>>=1;
 		}
 		return result;

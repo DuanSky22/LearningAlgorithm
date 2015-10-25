@@ -10,7 +10,7 @@ import java.io.File;
 public class SearchEngine {
 	
 	public static void main(String args[]){
-		String key="Bit";
+		String key="ingle";
 		String path=SearchEngine.class.getClassLoader().getResource("").getPath();
 		search(path,key);
 	}
