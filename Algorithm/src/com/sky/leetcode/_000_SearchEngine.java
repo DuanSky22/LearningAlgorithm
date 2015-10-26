@@ -7,11 +7,11 @@ package com.sky.leetcode;
 
 import java.io.File;
 
-public class SearchEngine {
+public class _000_SearchEngine {
 	
 	public static void main(String args[]){
-		String key="ingle";
-		String path=SearchEngine.class.getClassLoader().getResource("").getPath();
+		String key="NotFinished";
+		String path=_000_SearchEngine.class.getClassLoader().getResource("").getPath();
 		search(path,key);
 	}
 	
