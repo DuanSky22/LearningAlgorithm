@@ -1,6 +1,6 @@
 /**
 * @author DuanSky
-* @date 2015Äê10ÔÂ10ÈÕ ÏÂÎç7:47:47
+* @date 2015ï¿½ï¿½10ï¿½ï¿½10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½7:47:47
 * @content 
 */
 package com.sky.leetcode;
@@ -13,10 +13,17 @@ public class _008_StringtoInteger_1 {
 		String str="      -11919730356x";
 		System.out.println(myAtoi(str));
 	}
+	
+	public static int myAtoi(String str){
+		int a=0;
+		
+		return a;
+	}
+	
 	/*
 	 * It's horrible!
 	 */
-	public static int myAtoi(String str) {
+	public static int myAtoi_wrong_solution(String str) {
 		int result=0;
         if(str.length()==0)
         	return 0;
