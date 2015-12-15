@@ -1,6 +1,6 @@
 /**
 * @author DuanSky
-* @date 2015Äê10ÔÂ24ÈÕ ÏÂÎç2:26:21
+* @date 2015ï¿½ï¿½10ï¿½ï¿½24ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½2:26:21
 * @content 
 */
 package com.sky.leetcode;
@@ -10,7 +10,7 @@ import java.io.File;
 public class _000_SearchEngine {
 	
 	public static void main(String args[]){
-		String key="set";
+		String key="Search";
 		String path=_000_SearchEngine.class.getClassLoader().getResource("").getPath();
 		search(path,key);
 	}

@@ -1,15 +1,21 @@
 package com.sky.leetcode;
 /*
  *  @author: DuanSky
- *    @time: 2015Äê8ÔÂ19ÈÕ ÏÂÎç10:26:26
+ *    @time: 2015ï¿½ï¿½8ï¿½ï¿½19ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:26:26
  * @content:
 
  */
-public class _010_RegularExpressionMatching {
+public class _010_RegularExpressionMatching_NotFinished {
 	public static void main(String args[]){
-		System.out.println(isMatch("ab", ".*"));
+		System.out.println(isMatch("aa", "a"));
 	}
+	
 	public static boolean isMatch(String s,String p){
+		boolean result=false;
+		return result;
+	}
+	
+	public static boolean isMatch_wrong_solution(String s,String p){
 		if(s==null && p==null)
 			return true;
 		if((s!=null && p==null) || (s==null && p!=null ))
@@ -18,11 +24,11 @@ public class _010_RegularExpressionMatching {
 		int offset=0;
 		for(int i=0;i<n;i++){
 			char charS=s.charAt(i);
-			//sÃ»ÓÐÆ¥ÅäÍê£¬pÆ¥ÅäÍê
+			//sÃ»ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ê£¬pÆ¥ï¿½ï¿½ï¿½ï¿½
 			if(offset>=p.length())
 				return false;
 			char charP=p.charAt(offset);
-			if(charS==charP){//Èç¹ûÁ½¸ö×Ö·ûÏàµÈ£¬Ö±½ÓÍùºóÆ¥Åä
+			if(charS==charP){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½È£ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
 				offset++;
 				continue;
 			}
