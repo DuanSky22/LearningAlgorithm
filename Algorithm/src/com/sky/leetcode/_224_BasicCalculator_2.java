@@ -8,18 +8,20 @@ import java.util.Stack;
  * @content 
  */
 
-public class BasicCalculator_NotFinished {
+public class _224_BasicCalculator_2 {
 	
 	public static void main(String args[]){
 		String s=" 1+(5)";
 		System.out.println(calculate(s));
 	}
-	private static int calculate(String s) {
+	private static int calculate_(String s) {
 		int result=0;
 		return result;
 	}
-	//MISTAKE 算法不能处理1+(5)这样的算式。
-	public static int calculate_wrong_solution(String s) {
+	
+	
+	//TODO 下面的方法太麻烦，看能不能够简化。
+	public static int calculate(String s) {
         Stack<String> stack=new Stack<String>(); int i=0;
         while(i<s.length()){
         	char current=s.charAt(i);
@@ -39,8 +41,10 @@ public class BasicCalculator_NotFinished {
         			int right=Integer.valueOf(stack.pop()); //右边的值
         			String operation=stack.pop(); //计算符号
         			//MISTAKE (1) 如果只是单值而不是两个数组成的算式，这种情况需要直接返回。
-        			if(operation.equals("("))
-        				operation=stack.pop();
+        			if(operation.equals("(")){
+        				stack.push(right+"");
+        				break;
+        			}
         			int left=Integer.valueOf(stack.pop()); //左边的值
         			//MISTAKE 在java里，不要用==来判断两个字符串是否相等！，用equals来判断两个字符串是否相等。
         			if(!stack.isEmpty() && stack.peek().equals("-")){ //判断左边的值的符号

@@ -10,7 +10,7 @@ import java.io.File;
 public class _000_SearchEngine {
 	
 	public static void main(String args[]){
-		String key="Search";
+		String key="Word";
 		String path=_000_SearchEngine.class.getClassLoader().getResource("").getPath();
 		search(path,key);
 	}

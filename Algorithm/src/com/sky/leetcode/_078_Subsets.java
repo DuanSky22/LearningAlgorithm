@@ -1,19 +1,21 @@
 /**
 * @author DuanSky
-* @date 2015Äê10ÔÂ11ÈÕ ÏÂÎç3:25:54
+* @date 2015ï¿½ï¿½10ï¿½ï¿½11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½3:25:54
 * @content 
 */
 package com.sky.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class _078_Subsets {
 	
 	public static void main(String args[]){
-		int[] nums={};
-		subsets(nums);
+		int[] nums={1,2,3,4};
+		System.out.println(subsets(nums));
+		System.out.println(_subsets(nums));
 	}
 	
 	public static List<List<Integer>> subsets(int[] nums) {
@@ -34,5 +36,21 @@ public class _078_Subsets {
 		
         return result;
     }
+	
+	public static List<List<Integer>> _subsets(int[] nums){
+		Arrays.sort(nums);
+		List<List<Integer>> result=new ArrayList<List<Integer>>();
+		List<Integer> empty=new ArrayList<Integer>();
+		result.add(empty);
+		for(int num : nums){
+			int length=result.size();
+			for(int i=0;i<length;i++){
+				List<Integer> copy=new ArrayList<Integer>(result.get(i));
+				copy.add(num);
+				result.add(copy);
+			}
+		}
+		return result;
+	}
 
 }
