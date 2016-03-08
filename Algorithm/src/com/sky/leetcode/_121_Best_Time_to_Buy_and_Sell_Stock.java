@@ -11,6 +11,19 @@ public class _121_Best_Time_to_Buy_and_Sell_Stock {
 		System.out.println(maxProfit_3(prices));
 	}
 	
+	public static int maxProfit_best_solution(int[] prices){
+		if(prices.length<2) return 0;
+		int min=prices[0],maxProfit=0;
+		for(int i=1;i<prices.length;i++){
+			//TRICK 中間的判断过程都可以不使用
+//			if(prices[i]<min) min=prices[i];
+//			else maxProfit=Math.max(maxProfit, prices[i]-min);
+			min=Math.min(prices[i], min);
+			maxProfit=Math.max(maxProfit, prices[i]-min);
+		}
+		return maxProfit;
+	}
+	
 	public static int maxProfit_3(int[] prices){
 		if(prices.length<2) return 0;
 		int min=prices[0], max=prices[1], profit=0;

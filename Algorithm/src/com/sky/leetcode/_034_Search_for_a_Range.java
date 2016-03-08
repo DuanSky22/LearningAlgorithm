@@ -8,11 +8,12 @@ package com.sky.leetcode;
 public class _034_Search_for_a_Range {
 	
 	public static void main(String args[]){
-		int[] nums={7,7,7,7,7};
-		int target=7;
+		int[] nums={1};
+		int target=0;
 		int[] result=searchRange(nums,target);
 		System.out.println(result[0]+" "+result[1]);
-		//System.out.println(findRight(nums,target));
+		System.out.println(findLeft(nums,target));
+		System.out.println(findRight(nums,target));
 	}
 	
 	public static int findLeft(int[] nums,int target){
@@ -24,7 +25,8 @@ public class _034_Search_for_a_Range {
 			else //如果target和 middle相等，那么也需要将high移动到middle，即保证相等时也要往左一定
 				high=middle;
 		}
-		return nums[low]==target ? low : -1;
+		return low;
+//		return nums[low]==target ? low : -1;
 	}
 	
 	public static int findRight(int nums[],int target){
@@ -36,7 +38,8 @@ public class _034_Search_for_a_Range {
 			else
 				high=middle-1;
 		}
-		return nums[high]==target ? high : -1;
+		return high+1;
+//		return nums[high]==target ? high : -1;
 	}
 	
 	public static int[] searchRange(int[] nums,int target){

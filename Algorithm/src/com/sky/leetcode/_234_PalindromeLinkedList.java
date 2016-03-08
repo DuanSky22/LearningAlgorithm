@@ -1,23 +1,33 @@
 package com.sky.leetcode;
 /*
  *  @author: DuanSky
- *    @time: 2015年8月23日 下午12:34:47
+ *    @time: 2015锟斤拷8锟斤拷23锟斤拷 锟斤拷锟斤拷12:34:47
  * @content:
- * 题目：
+ * 锟斤拷目锟斤拷
  * 
 	Given a singly linked list, determine if it is a palindrome.
 	Follow up:
 	Could you do it in O(n) time and O(1) space?
-	答案:
-	    比较精彩的答案：
+	锟斤拷:
+	    锟饺较撅拷锟绞的答案ｏ拷
 	    https://leetcode.com/discuss/45656/easy-understand-java-solution-o-1-space-cost
-	    该题目的难点是如何使得空间复杂度达到o(1)?
-	  继续往下引申为如何在o(1)空间内反转链表？
+	    锟斤拷锟斤拷目锟斤拷锟窖碉拷锟斤拷锟斤拷锟绞癸拷每占涓达拷佣却锏給(1)?
+	  锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷为锟斤拷锟斤拷锟給(1)锟秸硷拷锟节凤拷转锟斤拷锟斤拷
  */
 class ListNode{
 	int val;
 	ListNode next;
 	ListNode(int x){this.val=x;}
+	public static ListNode generate(int[] array){
+		if(array==null || array.length==0) return null;
+		int length = array.length;
+		ListNode res = new ListNode(array[0]), temp = res;
+		for(int i=1;i<length;i++){
+			temp.next = new ListNode(array[i]);
+			temp = temp.next;
+		}
+		return res;
+	}
 }
 public class _234_PalindromeLinkedList {
 	public boolean isPalindrome(ListNode head) {
