@@ -8,7 +8,7 @@ package com.sky.leetcode;
 
 public class _091_Decode_Ways_1 {
 	public static void main(String args[]){
-		String s="10";
+		String s="02";
 		System.out.println(numDecodings_(s));
 		System.out.println(numDecodings(s));
 	}
@@ -35,9 +35,9 @@ public class _091_Decode_Ways_1 {
 		return d[size];
 	}
 	
-	//递归算法，动态规划
+	//递归算法，动态规划  time limit exceeded !!! wrong answer!
 	public static int numDecodings(String s) {
-      if(s.length()<=1) return "0".equals(s.substring(0,s.length())) ? 0 : 1;
+      if(s.length()<=1) return  s.length()==0 || "0".equals(s.substring(0,s.length())) ? 0 : 1;
       if(Integer.parseInt(s.substring(0,2))>26) return numDecodings(s.substring(1,s.length()));
       else if(Integer.parseInt(s.substring(0,1))==0) return numDecodings(s.substring(1,s.length()));
       else return numDecodings(s.substring(1,s.length()))+numDecodings(s.substring(2,s.length()));
