@@ -1,4 +1,4 @@
-package com.sky.topic;
+package com.sky.topic.dynamic_programming;
 
 /**
  * @author DuanSky

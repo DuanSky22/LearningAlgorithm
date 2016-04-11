@@ -1,4 +1,4 @@
-package com.sky.topic;
+package com.sky.topic.dynamic_programming;
 /**
  * @author DuanSky
  * @date 2016年3月6日 下午4:43:40
