@@ -3,8 +3,37 @@ package com.sky.leetcode;
 public class _009_PalindromeNumber_NotFinished {
 	
 	public static void main(String args[]){
-		System.out.println(isPalindrome(147483647));
+		System.out.println(isPalindrome2(322123));
 	}
+	
+	public static boolean isPalindrome2(int x){
+		if(x < 0 || (x != 0 && x % 10 == 0)) return false;
+		int sum = 0;
+		while(x > sum) {
+			sum = sum * 10 + x % 10;
+			x /= 10;
+		}
+		return x == sum || x == sum / 10;
+	}
+	
+	public static boolean isPalindrome1(int x){
+		if(x < 0) return false;
+		if(x < 10) return true;
+		int count = 0, temp = x, j = 0;
+		while(temp != 0){
+			temp /= 10;
+			count++;
+		}
+		while(j < count/2){
+			int base = (int)Math.pow(10, count - 2 * j - 1);
+			if(x % 10 != x / base) return false;
+			x -= x / base * base;
+			x /= 10;
+			j++;
+		}
+		return true;
+	}
+	
 	public static boolean isPalindrome0(int x){
 		if(x<0)
 			return false;

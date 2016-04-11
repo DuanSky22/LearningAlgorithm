@@ -10,14 +10,36 @@ import java.util.Map;
 
 public class _008_StringtoInteger_1 {
 	public static void main(String args[]){
-		String str="      -11919730356x";
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println((int)'+');
+		System.out.println((int)'-');
+		String str="-1";
 		System.out.println(myAtoi(str));
 	}
 	
+	/*
+	 * "010"=>"10"
+	 * "+004500" => "4500"
+	 */
 	public static int myAtoi(String str){
-		int a=0;
-		
-		return a;
+		int res = 0, sign = 1, i = 0;
+		//the first step : remove all breaks
+		while(i<str.length() && str.charAt(i)==' ') 
+			i++;
+		if(i == str.length()) return 0;
+		//the second step: get the sign of the number.
+		if(str.charAt(i)=='-' || str.charAt(i)=='+'){
+			sign = 44 - str.charAt(i); 
+			i++;
+		}
+		//the third step: translate it.
+		for(;i < str.length() && str.charAt(i) >= '0' && str.charAt(i) <= '9';i++){
+			if(res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && str.charAt(i)>='7'))
+				return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+			res = res * 10 + str.charAt(i)-'0';
+		}
+		return res * sign;
 	}
 	
 	/*

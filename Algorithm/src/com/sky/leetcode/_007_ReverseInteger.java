@@ -10,7 +10,7 @@ public class _007_ReverseInteger {
 	//TODO 整数越界后是啥？
 	public static void main(String args[]){
 		int x=1534236469;
-		System.out.println(reverse(x));
+		System.out.println(reverse_(x));
 	}
 	
 	/*
@@ -18,6 +18,19 @@ public class _007_ReverseInteger {
 	 * 如果 a=10*b+c 已经超出数组的最大范围，
 	 * 那么(a-c)/10 !=b ? 如何推导出来？
 	 */
+	//the main idea of this problem is that when the reverse of the int is out of the range of the int,
+	// you should return 0 represented.
+	public static int reverse_(int x){
+		int res = 0;
+		while(x != 0){
+			int curr = res * 10 + x % 10;
+			if((curr - x % 10) / 10 != res) return 0;
+			x /= 10;
+			res = curr;
+		}
+		return res;
+	}
+	
 	public static int reverse(int x) {
 		int result=0;
 		while(x/10 != 0 || x!=0){

@@ -8,7 +8,7 @@ package com.sky.leetcode;
 public class _264_Ugly_Number_II {
 	
 	public static void main(String args[]){
-		System.out.println(nthUglyNumber(11));
+		System.out.println(_nthUglyNumber(11));
 	}
 	
 	//time limited!
@@ -31,14 +31,21 @@ public class _264_Ugly_Number_II {
 	}
 	
 	public static int _nthUglyNumber(int n){
-		int counter=0;
-		int a1=0,b1=0,c1=0;
-		int a2=0,b2=0,c2=0;
-		int a3=0,b3=0,c3=0;
-		int r1=power(a1+1,b1,c1), r2=power(a2,b2+1,c2), r3=power(a3,b3,c3+1);
-		int min=Math.min(r1, Math.min(r2,r3));
-		if(min==r1) a1++;
-		return 0;
+		if(n < 6) return n;
+		int t2 = 0, t3 = 0, t5 = 0;
+		int uglyNumbers[] = new int[n];
+		uglyNumbers[0] = 1;
+		for(int i = 1; i < n; i++){
+			uglyNumbers[i] = Math.min(uglyNumbers[t5] * 5, 
+					Math.min(uglyNumbers[t2] * 2, uglyNumbers[t3] * 3));
+			if(uglyNumbers[i]==uglyNumbers[t2] * 2)
+				t2++;
+			if(uglyNumbers[i]==uglyNumbers[t3] * 3)
+				t3++;
+			if(uglyNumbers[i]==uglyNumbers[t5] * 5)
+				t5++;
+		}
+		return uglyNumbers[n-1];
 	}
 	
 	public static int power(int a,int b,int c){
