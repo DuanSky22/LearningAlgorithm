@@ -8,6 +8,7 @@ package com.sky.topic.string;
 
 public class KeyIndexCounter {
 	
+	
 	public void sort(Data[] data,int r){
 		if(data == null || data.length == 0) return;
 		int n = data.length;

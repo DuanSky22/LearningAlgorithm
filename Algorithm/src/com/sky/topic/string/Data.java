@@ -7,6 +7,7 @@ package com.sky.topic.string;
 
 public class Data {
 	
+	
 	private String name;
 	private int key;
 	

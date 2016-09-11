@@ -10,6 +10,7 @@ package com.sky.topic.dynamic_programming;
 
 public class _01_DP_Package_03MultiObject {
 
+	
 	public static void main(String args[]) {
 		_01_DP_Package_03MultiObject test = new _01_DP_Package_03MultiObject();
 		int[] c = { 2, 2, 6, 1 };
